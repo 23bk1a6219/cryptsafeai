@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Welcome to CryptSafeAI Dashboard</h2>
+
+<!-- Upload Scanner Section -->
+<div class="card my-4">
+    <div class="card-body">
+        <h5 class="card-title">Scan a File for Ransomware</h5>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <input class="form-control" type="file" name="file" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Scan File</button>
+        </form>
+    </div>
+</div>
+
+<!-- Stats Cards -->
+<div class="row">
+    <div class="col-md-4">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-body">
+                <h5 class="card-title">0 Threats Detected</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-warning mb-3">
+            <div class="card-body">
+                <h5 class="card-title">0 Rollbacks Performed</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-info mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Cloud Storage: Connected</h5>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
